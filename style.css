@@ -1,0 +1,48 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+}
+header {
+  background: url(https://picjumbo.com/wp-content/uploads/woman-writing-documents-on-laptop-with-full-size-keyboard-free-photo-2210x1473.jpg)
+    center / cover;
+  width: 100%;
+  height: 40%;
+}
+/* nav */
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 5rem;
+}
+.logo{
+  display: flex;
+  align-items: center;
+}
+ol {
+  list-style: none;
+  display: flex;
+  
+}
+a {
+  text-decoration: none;
+  color: white;
+  
+}
+h1 {
+  color: white;
+}
+.sprache{
+  border: 1px solid white;
+  border-radius: 50%;
+  padding: 5px;
+  margin: 7px;
+}
+.nav{
+  margin: 7px;
+}
