@@ -234,11 +234,8 @@ hr {
   border-radius: 12px;
 }
 .bild1_2 {
-<<<<<<< HEAD
   background: url(./images/tindog_tablet.png) top / cover;
-=======
   background: url(./images/projekt1.png) top / cover;
->>>>>>> 4c1e94e52481edf91e48a713960146adc885181f
   width: 40%;
   height: 40%;
   z-index: 0;
@@ -250,11 +247,8 @@ hr {
   border-radius: 10px;
 }
 .bild1_3 {
-<<<<<<< HEAD
   background: url(./images/tindog_mobile.png) top / cover;
-=======
   background: url(./images/projekt1.png) top / cover;
->>>>>>> 4c1e94e52481edf91e48a713960146adc885181f
   width: 18%;
   height: 50%;
   z-index: 0;
@@ -355,7 +349,6 @@ hr {
 }
 .bild1_2_3 {
   background: url(./images/burger.png) top / cover;
->>>>>>> 4c1e94e52481edf91e48a713960146adc885181f
 }
 .container_über_mich {
   display: flex;
@@ -1024,8 +1017,6 @@ footer {
     font-size: 1rem;
     margin: 0.5rem;
   }
-<<<<<<< HEAD
-=======
   .bild1_2_1 {
     background: url(./images/burger.png) top / cover;
   }
@@ -1035,7 +1026,6 @@ footer {
   .bild1_2_3 {
     background: url(./images/burger.png) top / cover;
   }
->>>>>>> 4c1e94e52481edf91e48a713960146adc885181f
 }
 /* widescreen desktop */
 @media (min-width: 1441px) {
