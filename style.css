@@ -427,7 +427,7 @@ hr {
 .foto {
   width: 40%;
   height: 40%;
-  background: url(/images/ich2.jpg) bottom / cover;
+  background: url(./images/ich2.jpg) bottom / cover;
   position: absolute;
   left: 30%;
   /* top: 0; */
