@@ -1,48 +1,992 @@
+@import url("https://fonts.googleapis.com/css2?family=Love+Ya+Like+A+Sister&family=Montserrat:wght@200;900&family=Nabla&family=Noto+Sans+Balinese:wght@700&family=Nunito:wght@800&family=Raleway:wght@900&display=swap");
 * {
   margin: 0;
   padding: 0;
 }
 body {
-  width: 100vw;
-  height: 100vh;
-  background-color: black;
+  background-color: #30345a;
+  background: #f9f8ff;
+  background-size: 400% 400%;
+  animation: gradient 12s ease infinite;
+  font-family: "Montserrat", sans-serif;
 }
-header {
-  background: url(https://picjumbo.com/wp-content/uploads/woman-writing-documents-on-laptop-with-full-size-keyboard-free-photo-2210x1473.jpg)
-    center / cover;
-  width: 100%;
-  height: 40%;
-}
-/* nav */
-nav {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  height: 5rem;
-}
-.logo{
-  display: flex;
-  align-items: center;
-}
-ol {
-  list-style: none;
-  display: flex;
-  
-}
+
 a {
   text-decoration: none;
-  color: white;
-  
+  color: #02062c;
 }
-h1 {
-  color: white;
+.container {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
 }
-.sprache{
-  border: 1px solid white;
+#container_header,
+#Projekte,
+#über_mich,
+#container_kontakt {
+  min-width: 100vw;
+  min-height: 100vh;
+}
+/* header */
+header {
+  background: url(/images/manarola-vertical-free-photo-2210x3315.jpg) center /
+    cover;
+  width: 100%;
+  height: 100%;
+
+}
+.box_header {
+  display: grid;
+  grid-template-rows: 12% 10% 10% 25%;
+  grid-template-columns: 40% 55%;
+  clip-path: url(#myClip_mobile);
+  position: absolute;
+  animation: nach_unten 3s forwards;
+  text-align: center;
+}
+@keyframes nach_unten {
+  0% {
+    height: 0%;
+  }
+  100% {
+    height: 100%;
+    background: #f1f1e6ea; 
+  }
+}
+.h2_hallo {
+  grid-area: 2/1/3/3;
+  align-self: center;
+  font-size: 4rem;
+  color: #02062c;
+  letter-spacing: 1px;
+  justify-self: center;
+}
+.h2_box {
+  grid-area: 3/1/4/3;
+  font-size: 1.4rem;
+  align-self: center;
+  margin: 0 0.2rem;
+}
+.h2_header {
+  margin: 0;
+}
+.box_header p {
+  grid-area: 4/1/5/3;
+
+  color: #02062c;
+  align-self: center;
+  letter-spacing: 1px;
+  font-size: 1.6rem;
+  padding: 0 0.7rem;
+}
+
+span {
+  color: #7888f3;
+}
+svg {
+  width: 0;
+  height: 0;
+  /* border: 1px solid #02062c; */
+}
+
+/* nav */
+
+nav {
+  position: fixed;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1;
+  animation: menü 3s forwards;
+}
+@keyframes menü {
+  0% {
+    height: 0%;
+  }
+  100% {
+    height: 8%;
+    background-color: #f1f1e6c7;
+    box-shadow: 0px 0px 80px #02062c;
+  }
+}
+
+/* nav logo */
+
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.logo:hover {
+  transform: scale(1, 1.2);
+}
+.fa-fan {
+  margin: 0.5rem;
+  color: #7888f3;
+  font-size: 3rem;
+}
+.logo h1 {
+  color: #02062c;
+  font-size: 1.5rem;
+}
+.logo h2 {
+  color: #fff7d6;
+  text-shadow: 1px 1px 3px #02062c;
+  font-size: 1.2rem;
+}
+/* nav sprachen */
+.sprache {
+  background-color: #f1f1e6;
+  border: 1px inset #02062c;
   border-radius: 50%;
-  padding: 5px;
-  margin: 7px;
+  padding: 0.2rem;
+  text-shadow: 0 0 2px;
+  margin: 0.2rem;
+  font-size: 0.8rem;
 }
-.nav{
-  margin: 7px;
+.sprache:hover {
+  background-color: #02062c49;
+  transform: scale(1.1);
+  display: inline-block;
+  border: none;
+  transform: scale(1.4);
+  box-shadow: inset 1px 1px 3px #02062c;
+}
+
+.menü_liste .fa-github {
+  font-size: 2rem;
+  margin-left: 2rem;
+
+  margin-right: 2rem;
+}
+.menü_liste .fa-github:hover {
+  transform: scale(1.3);
+}
+
+.mobile_menü {
+  display: none;
+}
+/* Unterschriften */
+
+#Projekte h2,
+#über_mich h2,
+#container_kontakt h2 {
+  padding-top: 0rem;
+  font-size: 2rem;
+  text-align: center;
+  text-shadow: 0 0 5px #f1f1e6;
+  color: #02062c;
+  padding-top: 6rem;
+}
+.linie {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 1.5rem;
+}
+hr {
+  width: 15%;
+  height: 0;
+  border-top: 1px solid #7888f3;
+}
+.icon {
+  font-size: 1rem;
+  margin: 0.5rem;
+}
+/* Projekte */
+
+.Feld_Bilder {
+  display: grid;
+  grid-template-rows: repeat(4, 28vh);
+  grid-template-columns: 100%;
+  gap: 3rem;
+  margin: 1rem 5rem;
+}
+
+/* Projekt1 */
+
+.div1 {
+  display: flex;
+  flex-direction: column;
+  border: #f1f1e6 1px solid;
+  box-shadow: 0 0 10px inset;
+}
+
+.bild_projekt1 {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+.bild1_1 {
+  background: url(/images/projekt1.png) top / cover;
+  width: 60%;
+  height: 75%;
+  margin-top: 1rem;
+  border: 3px solid #02062c;
+  border-radius: 12px;
+}
+.bild1_2 {
+  background: url(/images/projekt1.png) top / cover;
+  width: 40%;
+  height: 40%;
+  z-index: 0;
+  position: absolute;
+  left: 3rem;
+  bottom: 1rem;
+  border: 3px solid #02062c;
+  box-shadow: #02062c 15px 15px 20px;
+  border-radius: 10px;
+}
+.bild1_3 {
+  background: url(/images/projekt1.png) top / cover;
+  width: 18%;
+  height: 50%;
+  z-index: 0;
+  position: absolute;
+  right: 3rem;
+  bottom: 1rem;
+  border: 3px solid #02062c;
+  box-shadow: #02062c 15px 15px 20px;
+  border-radius: 10px;
+}
+.text_projekt {
+  display: grid;
+  grid-template-rows: 60% 40%;
+  grid-template-columns: 65% 35%;
+  font-weight: 500;
+  color: #02062c;
+  background-color: #f1f1e6;
+  box-shadow: 5px 5px 15px #02062c;
+}
+.text_projekt > p {
+  grid-area: 1/1/2/2;
+  font-weight: 500;
+  color: #02062c;
+  font-weight: 900;
+  text-align: left;
+  font-size: 1.2rem;
+  align-self: center;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-left: 0.5rem;
+}
+.text_projekt div {
+  grid-area: 2/1/3/2;
+  margin-left: 0rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  font-size: 0.7rem;
+}
+/* ist nicht zu verändern */
+
+.knopf {
+  grid-area: 1/2/3/3;
+  width: 65%;
+  background-color: #7888f3;
+  color: #f8f8ff;
+  text-shadow: 0 0 2px #02062c;
+  box-shadow: 1px 1px 5px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  text-align: center;
+  align-self: center;
+  justify-self: flex-end;
+  margin: 0rem 0.7rem;
+  padding: 0.3rem 0.2rem;
+  border-radius: 3px;
+  font-size: 0.9rem;
+}
+
+.knopf:hover {
+  background-color: transparent;
+  box-shadow: 1px 1px 5px #02062c;
+  transform: scale(1.1, 1.2);
+  border: 1px solid #02062c;
+}
+.bild1_2_1 {
+  background: url(/images/burger.png) top / cover;
+}
+.bild1_2_2 {
+  background: url(/images/burger.png) top / cover;
+}
+.bild1_2_3 {
+  background: url(/images/burger.png) top / cover;
+}
+.container_über_mich {
+  display: flex;
+  width: 100%;
+  height: 65vh;
+  position: relative;
+  justify-content: center;
+  margin: 0 auto;
+}
+/* Unterschrift 2 */
+
+#über_mich hr {
+  width: 10%;
+  height: 0;
+  color: #02062c;
+}
+
+/*  Fakten über mich */
+
+.box_über_mich {
+  width: 85%;
+  margin-left: 0%;
+  height: 100%;
+  background-color: #f1f1e6;
+  border: 2px solid #02062c;
+  margin-top: 20%;
+}
+
+.box_Fakt {
+  width: 90%;
+  height: 18%;
+  margin: 0 auto;
+  position: relative;
+}
+.box_Fakt:nth-child(1) {
+  margin-top: 33%;
+}
+.box_Fakt:nth-child(3) {
+  height: 25%;
+}
+.box_Fakt:nth-child(2) {
+  height: 15%;
+}
+.box_über_mich i {
+  font-size: 1.5rem;
+  margin-right: 1rem;
+  text-align: center;
+  color: #02062c;
+}
+.box_unterschrift {
+  height: 43%;
+  padding-left: 1.5rem;
+  font-size: 1.1rem;
+  font-weight: bold;
+  background: linear-gradient(
+    45deg,
+    #7888f3,
+    #f1f1e6,
+    #7888f3,
+    #f8f8ff,
+    #7888f3
+  );
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+}
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+.box_unterschrift p {
+  padding-top: 0.4rem;
+  text-transform: uppercase;
+}
+.Fakt {
+  width: 94%;
+  height: auto;
+  position: absolute;
+  top: 2.1rem;
+  left: 0.7rem;
+  background-color: #f1f1e6;
+  font-size: 0.9rem;
+  box-shadow: 0px 0px 5px #7888f3;
+}
+.Fakt p {
+  margin: 0.5rem;
+}
+.liste {
+  padding: 1rem 0;
+}
+#über_mich span {
+  font-weight: 800;
+  color: #02062c;
+}
+.Fakt ul {
+  list-style: none;
+  margin-left: 0.5rem;
+}
+
+/* Foto */
+
+.foto {
+  width: 40%;
+  height: 40%;
+  background: url(/images/ich2.jpg) bottom / cover;
+  position: absolute;
+  left: 30%;
+  /* top: 0; */
+  box-shadow: 5px 5px 15px #02062c;
+}
+
+/* box1 - Kontakte */
+
+#container_kontakt {
+  /* background-color: #7888f3; */
+  width: 100vw;
+  height: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+#container_kontakt hr {
+  width: 28%;
+  height: 0;
+  color: #7888f3;
+}
+#container_kontakt .linie {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container_kontakt1 {
+  background-color: #7888f3;
+  /* height: 50%; */
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.box_kontakt11 {
+  width: 80%;
+  /* height: 20%; */
+  /* margin-left: 6rem; */
+  display: flex;
+  /* justify-content: flex-start; */
+  /* align-items: center; */
+  margin: 1rem;
+}
+
+.icon_kontakt {
+  /* position: absolute; */
+  font-size: 2rem;
+  /* top: -2.5rem;
+  left: 2rem; */
+  /* background-color: #7888f3; */
+  border: 2px groove #f1f1e6;
+  border-radius: 50%;
+  color: #02062c;
+  font-weight: bold;
+  padding: 1rem 1rem;
+  margin-right: 2rem;
+}
+
+.icon_sociyl {
+  font-size: 2rem;
+
+  background-color: #7888f3;
+  border: 2px ridge #f1f1e6;
+  border-radius: 50%;
+  color: #f1f1e6;
+  font-weight: bold;
+  padding: 1rem 1rem;
+  font-weight: 600;
+  margin-right: 2rem;
+  /* margin: 1rem 1rem; */
+}
+.box_kontakt11:hover {
+  background: linear-gradient(
+    45deg,
+    #7888f3,
+    #f1f1e6,
+    #7888f3,
+    #f8f8ff,
+    #7888f3
+  );
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+  box-shadow: 1px 1px 30px #02062c;
+}
+
+.kontakt {
+  color: #02062c;
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  /* text-shadow: 0 0 10px #02062c; */
+}
+
+/* footer */
+footer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 6%;
+  background-color: #f1f1e6;
+  border: 1px solid #02062c27;
+}
+
+@media (max-width: 992px) {
+  /* nav menü */
+
+  .box_menü {
+    position: relative;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .mobile_menü {
+    display: block;
+  }
+  .fa-bars {
+    font-size: 2.5rem;
+    margin: 0.5rem;
+    padding: 0.5rem;
+    box-shadow: 1px 1px 5px #02062c;
+  }
+  .fa-bars:hover {
+    transform: scale(1.2, 1);
+    box-shadow: inset 1px 1px 3px #02062c;
+  }
+  .hamburger_menü:hover .menü_liste {
+    display: inline-block;
+  }
+  .menü_liste {
+    display: none;
+    top: 4.5rem;
+    right: 0rem;
+    transition: display 2s;
+    position: absolute;
+  }
+  .menü_item {
+    width: 60vw;
+    padding: 1rem 0;
+    background-color: #f1f1e6;
+    text-align: center;
+    font-size: 1.3rem;
+    box-shadow: 1px 1px 5px #02062c;
+  }
+  .menü_item:hover {
+    box-shadow: inset 1px 1px 3px #02062c;
+    text-shadow: #02062c 0 0 2px;
+  }
+  ul {
+    list-style: none;
+  }
+  .menü_item a {
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+  }
+}
+
+/* handy  */
+@media (min-width: 576px) {
+  .fa-fan {
+    margin: 1rem 1rem 1rem 1.5rem;
+  }
+  .fa-bars {
+    margin: 2rem;
+  }
+  .Feld_Bilder {
+    grid-template-rows: repeat(4, 35vh);
+    grid-template-columns: 90%;
+  }
+  .text_projekt > p {
+    margin-left: 1.5rem;
+  }
+  .text_projekt div {
+    margin-left: 1rem;
+  }
+  .knopf {
+    margin: 0rem 1.3rem;
+  }
+  .container_über_mich {
+    height: 90vh;
+  }
+  .box_über_mich {
+    height: 70%;
+  }
+  .box_Fakt {
+    height: 17%;
+  }
+  .box_Fakt:nth-child(1) {
+    margin-top: 32%;
+  }
+  .box_Fakt:nth-child(3) {
+    height: 23%;
+    /* margin-bottom: 3rem; */
+  }
+  .box_Fakt:nth-child(2) {
+    height: 14%;
+  }
+  .box_unterschrift {
+    height: 45%;
+  }
+  .Fakt {
+    top: 2.1rem;
+    left: 0.8rem;
+  }
+  .foto {
+    width: 35%;
+    height: 30%;
+    left: 32%;
+  }
+}
+/*  tablet  */
+@media (min-width: 769px) {
+  .Feld_Bilder {
+    grid-template-rows: repeat(2, 30vh);
+    grid-template-columns: 50% 50%;
+  }
+  .text_projekt > p {
+    margin-left: 0.5rem;
+  }
+  .text_projekt div {
+    margin-left: 0rem;
+    font-size: 0.55rem;
+  }
+  .knopf {
+    width: 75%;
+  }
+  .bild1_1 {
+    width: 68%;
+    height: 75%;
+  }
+  .bild1_2 {
+    left: 1.5rem;
+  }
+  .bild1_3 {
+    right: 1.5rem;
+  }
+  .box_über_mich {
+    margin-top: 15%;
+  }
+  .foto {
+    width: 33%;
+    height: 38%;
+    left: 33%;
+    top: 0;
+  }
+  .box_Fakt {
+    height: 81px;
+  }
+  .box_Fakt:nth-child(1) {
+    margin-top: 225px;
+  }
+  .box_Fakt:nth-child(3) {
+    height: 130px;
+  }
+  .box_Fakt:nth-child(2) {
+    height: 80px;
+  }
+  .box_unterschrift {
+    height: 52%;
+  }
+  .Fakt {
+    width: 95%;
+    top: 2rem;
+    left: 1rem;
+  }
+  #Projekte hr {
+    width: 8%;
+    height: 0;
+  }
+}
+
+/* desktop s */
+@media (min-width: 993px) {
+  .box_header {
+    grid-template-rows: 22% 15% 60%;
+    grid-template-columns: 45% 55%;
+    clip-path: url(#myClip);
+  }
+  .logo_text h2{
+    font-size: 1.5rem;
+  }
+  .h2_hallo {
+    grid-area: 1/2/2/3;
+    padding: 0 2rem;
+    align-self: flex-end;
+  }
+  .h2_box {
+    grid-area: 2/2/3/3;
+    font-size: 1.4rem;
+    align-self: center;
+    margin: 0 0.2rem;
+  }
+  .h2_header {
+    margin: 0;
+  }
+  .box_header p {
+    grid-area: 3/2/4/3;
+    align-self: flex-start;
+    font-size: 1.8rem;
+    padding: 3rem 5rem;
+  }
+
+  .text_header h2:nth-child(1) {
+    margin: 2rem;
+    font-size: 4rem;
+    color: #02062c;
+    letter-spacing: 1px;
+  }
+  .text_header h2 {
+    color: #02062c;
+    font-size: 2rem;
+    letter-spacing: 1px;
+  }
+
+  .text_header p {
+    margin-top: 4rem;
+    color: #02062c;
+    font-size: 2rem;
+    font-weight: 100;
+    letter-spacing: 1px;
+    font-weight: 300;
+  }
+  span {
+    color: #7888f3;
+  }
+  .box_menü {
+    display: flex;
+    align-items: center;
+    height: 100%;
+  }
+  .box_sprachen {
+    order: 1;
+    margin-right: 1rem;
+  }
+  .fa-bars {
+    display: none;
+  }
+  li {
+    list-style: none;
+  }
+  .menü_liste {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  .menü_item {
+    padding: 1rem;
+    margin: 0.4rem;
+    background-color: #f1f1e6;
+    border: 2px inset #02062c;
+    text-align: center;
+    width: 4.8rem;
+    font-size: 0.9rem;
+    height: 100%;
+  }
+  .menü_item:hover {
+    text-shadow: none;
+    transform: scale(1.1, 1.2);
+    background-color: #02062c6b;
+  }
+  .Feld_Bilder {
+    grid-template-rows: repeat(2, 30vh);
+    grid-template-columns: 50% 50%;
+    row-gap: 5rem;
+    margin-top: 4rem;
+  }
+  .container_über_mich {
+    width: 90%;
+    height: 65vh;
+    margin: 5rem auto;
+  }
+  #über_mich hr {
+    width: 5%;
+  }
+  .box_über_mich {
+    width: 100%;
+    margin: 0 0 0 8.5rem;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .box_Fakt {
+    width: 78%;
+    height: 17%;
+    margin-left: 23%;
+  }
+  .box_Fakt:nth-child(2) {
+    height: 17%;
+  }
+  .box_Fakt:nth-child(3) {
+    height: 26%;
+  }
+  .box_Fakt:nth-child(1) {
+    margin-top: 1rem;
+    height: 17%;
+  }
+  .box_Fakt:nth-child(4) {
+    height: 17%;
+  }
+  .box_unterschrift {
+    width: 90%;
+    height: 50%;
+  }
+  .Fakt {
+    width: 90%;
+    top: 2.1rem;
+    left: 0.7rem;
+  }
+  .foto {
+    width: 30%;
+    height: 84%;
+    left: 0;
+    top: 8%;
+  }
+}
+/* large desctop */
+@media (min-width: 1201px) {
+  .menü_item {
+    font-size: 1rem;
+    width: 6rem;
+  }
+  .box_sprachen {
+    margin: 0 1.5rem;
+  }
+  .box_header {
+    grid-template-rows: 30% 15% 50%;
+    grid-template-columns: 45% 55%;
+    clip-path: url(#myClip);
+  }
+  .h2_hallo {
+    padding: 0 2rem;
+    align-self: flex-end;
+    font-size: 5rem;
+  }
+  .h2_box {
+    font-size: 1.7rem;
+    align-self: center;
+    margin: 0 0.2rem;
+  }
+  .box_header p {
+    align-self: flex-start;
+    font-size: 1.8rem;
+    padding: 2rem 5rem 0 7rem;
+  }
+  .Feld_Bilder {
+    grid-template-rows: repeat(2, 80%);
+    grid-template-columns: 50% 50%;
+    gap: 3rem;
+    padding: 1rem 0;
+  }
+  .div1 {
+    flex-direction: row;
+  }
+  .bild1_1 {
+    width: 68%;
+    height: 75%;
+  }
+  .bild1_2 {
+    left: 1.8rem;
+  }
+  .bild1_3 {
+    right: 1.8rem;
+    width: 22%;
+  }
+  .text_projekt {
+    width: 38%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 0 1rem;
+  }
+  .text2 {
+    flex-direction: column;
+    color: #02062c;
+    font-weight: 900;
+    text-align: center;
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+  .icon_und_text {
+    flex-direction: row;
+
+    font-weight: 500;
+    width: 100%;
+    text-align: left;
+    text-transform: uppercase;
+    letter-spacing: 0;
+  }
+  .icon_und_text p {
+    font-size: 1rem;
+    margin: 0.5rem;
+  }
+  .bild1_2_1 {
+    background: url(/images/burger.png) top / cover;
+  }
+  .bild1_2_2 {
+    background: url(/images/burger.png) top / cover;
+  }
+  .bild1_2_3 {
+    background: url(/images/burger.png) top / cover;
+  }
+}
+/* widescreen desktop */
+@media (min-width: 1441px) {
+  .container_über_mich {
+    width: 90%;
+    height: 70vh;
+    margin: 3rem auto;
+  }
+  #über_mich hr {
+    width: 5%;
+  }
+  .box_über_mich {
+    width: 100%;
+    margin: 0 0 0 11.5rem;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .box_Fakt {
+    width: 78%;
+    height: 17%;
+    margin-left: 23%;
+  }
+  .box_Fakt:nth-child(2) {
+    height: 17%;
+  }
+  .box_Fakt:nth-child(3) {
+    height: 26%;
+  }
+  .box_Fakt:nth-child(1) {
+    margin-top: 1rem;
+    height: 17%;
+  }
+  .box_Fakt:nth-child(4) {
+    height: 17%;
+  }
+  .box_unterschrift {
+    width: 90%;
+    height: 50%;
+  }
+  .Fakt {
+    width: 90%;
+    top: 2.1rem;
+    left: 0.7rem;
+  }
+  .foto {
+    width: 30%;
+    height: 90%;
+    left: 0;
+    top: 5%;
+  }
 }

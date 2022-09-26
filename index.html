@@ -4,26 +4,303 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Evgeniia Pereprygina</title>
     <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/4693c79aab.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
-    <nav>
-      <div class="logo">
-        <img src="" alt="" />
-        <h1>Evgeniia</h1>
+    <div class="container">
+      <!-- nav -->
+      <nav>
+        <a class="logo" href="#">
+          <i class="fa-solid fa-fan"></i>
+          <div class="logo_text">
+            <h1>Evgeniia</h1>
+            <h2>Web-Entwicklerin</h2>
+          </div>
+        </a>
+        <div class="box_menü">
+          <div class="box_sprachen">
+            <a href="" class="sprache" style="background-color: #7888f39f;"> de </a>
+            <a href="/index_ru.html" class="sprache"> ru </a>
+          </div>
+          <ul class="mobile_menü">
+            <li class="hamburger_menü">
+              <i class="fa-solid fa-bars"></i>
+              <ul class="menü_liste">
+                <li class="menü_item"><a href="#">Home</a></li>
+                <li class="menü_item"><a href="#Projekte">Projekte</a></li>
+                <li class="menü_item"><a href="#über_mich">Über mich</a></li>
+                <li class="menü_item">
+                  <a href="#container_kontakt">Kontakte</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+          <div class="desktop_menü">
+            <ul class="menü_liste">
+              <li class="menü_item"><a href="#">Home</a></li>
+              <li class="menü_item"><a href="#Projekte">Projekte</a></li>
+              <li class="menü_item"><a href="#über_mich">Über mich</a></li>
+              <li class="menü_item">
+                <a href="#container_kontakt">Kontakte</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <!-- header animation -->
+      <div id="container_header" class="box_header">
+        <h2 class="h2_hallo">Hallo!</h2>
+        <div class="h2_box">
+          <h2 class="h2_header">Ich heiße <span> Evgeniia</span></h2>
+          <h2 class="h2_header">und bin <span> Web-Entwicklerin</span></h2>
+        </div>
+        <p>
+          momentan arbeite ich hauptsächlich mit Gestaltungssprachen HTML und
+          CSS, bald werde ich noch JavaScript kennenlernen.
+        </p>
       </div>
-      <ol>
-        <li class="sprache"><a href="">de</a></li>
-        <li class="sprache"><a href="">ru</a></li>
-      </ol>
-      <ol>
-        <li class="nav"><a href="">Home</a></li>
-        <li class="nav"><a href="">Projekte</a></li>
-        <li class="nav"><a href="">About</a></li>
-        <li class="nav"><a href="">Kontakt</a></li>
-      </ol>
-    </nav>
-    <header></header>
+      <!-- header -->
+      <header></header>
+
+      <!-- svg -->
+      <svg>
+        <defs>
+          <clipPath clipPathUnits="objectBoundingBox" id="myClip">
+            <path d="M0,.600 s.254-.557,.500,0,.500,0,.500,0V0H0Z" />
+            <path d="M0,.950 s.254-.557,.500,0,.500,0,.500,0V100H0Z" />
+          </clipPath>
+        </defs>
+      </svg>
+      <svg>
+        <defs>
+          <clipPath clipPathUnits="objectBoundingBox" id="myClip_mobile">
+            <path d="M0,.650 s.254-.157,.500,0,.500,0,.500,0V0H0Z" />
+            <path d="M0,.900 s.254-.157,.500,0,.500,0,.500,0V100H0Z" />
+          </clipPath>
+        </defs>
+      </svg>
+      <!-- Projekte -->
+      <section id="Projekte">
+        <h2>Meine Projekte</h2>
+        <div class="linie">
+          <hr />
+          <i class="fa-solid fa-check-double icon"></i>
+          <hr />
+        </div>
+        <div class="Feld_Bilder">
+          <div class="div1">
+            <div class="bild_projekt1">
+              <div class="bild1_1 bild1_1_1"></div>
+              <div class="bild1_2 bild1_1_2"></div>
+              <div class="bild1_3 bild1_1_3"></div>
+            </div>
+
+            <div class="text_projekt">
+              <p><b> Tindog</b></p>
+              <div class="text2">
+                <div class="icon_und_text">
+                  <p><i class="fa-regular fa-calendar icon"></i>09.2022</p>
+                </div>
+                <div class="icon_und_text">
+                  <p>
+                    <i class="fa-solid fa-gear icon"></i>HTML, CSS, Bootstrap
+                  </p>
+                </div>
+              </div>
+              <a href="/project.html" class="knopf">ansehen</a>
+            </div>
+          </div>
+          <div class="div1">
+            <div class="bild_projekt1">
+              <div class="bild1_1 bild1_2_1"></div>
+              <div class="bild1_2 bild1_2_2"></div>
+              <div class="bild1_3 bild1_2_3"></div>
+            </div>
+
+            <div class="text_projekt">
+              <p><b> Burger</b></p>
+              <div class="text2">
+                <div class="icon_und_text">
+                  <p><i class="fa-regular fa-calendar icon"></i>09.2022</p>
+                </div>
+                <div class="icon_und_text">
+                  <p>
+                    <i class="fa-solid fa-gear icon"></i>HTML, CSS, Bootstrap
+                  </p>
+                </div>
+              </div>
+              <a href="/project.html" class="knopf">ansehen</a>
+            </div>
+          </div>
+          <div class="div1">
+            <div class="bild_projekt1">
+              <div class="bild1_1 bild1_1_1"></div>
+              <div class="bild1_2 bild1_1_1"></div>
+              <div class="bild1_3 bild1_1_1"></div>
+            </div>
+
+            <div class="text_projekt">
+              <p><b> Tindog</b></p>
+              <div class="text2">
+                <div class="icon_und_text">
+                  <p><i class="fa-regular fa-calendar icon"></i>09.2022</p>
+                </div>
+                <div class="icon_und_text">
+                  <p>
+                    <i class="fa-solid fa-gear icon"></i>HTML, CSS, Bootstrap
+                  </p>
+                </div>
+              </div>
+              <a href="/project.html" class="knopf">ansehen</a>
+            </div>
+          </div>
+          <div class="div1">
+            <div class="bild_projekt1">
+              <div class="bild1_1 bild1_1_1"></div>
+              <div class="bild1_2 bild1_1_1"></div>
+              <div class="bild1_3 bild1_1_1"></div>
+            </div>
+
+            <div class="text_projekt">
+              <p><b> Tindog</b></p>
+              <div class="text2">
+                <div class="icon_und_text">
+                  <p><i class="fa-regular fa-calendar icon"></i>09.2022</p>
+                </div>
+                <div class="icon_und_text">
+                  <p>
+                    <i class="fa-solid fa-gear icon"></i>HTML, CSS, Bootstrap
+                  </p>
+                </div>
+              </div>
+              <a href="/project.html" class="knopf">ansehen</a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- über mich -->
+      <section id="über_mich">
+        <h2>Über mich</h2>
+        <div class="linie">
+          <hr />
+          <i class="fa-solid fa-check-double icon"></i>
+          <hr />
+        </div>
+
+        <div class="container_über_mich">
+          <!-- Fakten über mich -->
+          <div class="box_über_mich">
+            <!-- <h3>Fakten über mich</h3> -->
+            <!-- Fakt 1 -->
+            <div class="box_Fakt">
+              <div class="box_unterschrift">
+                <p><i class="fa-solid fa-user-graduate"></i>Abschluss</p>
+              </div>
+              <div class="Fakt">
+                <p>
+                  zurzeit lerne Webentwicklung beim
+                  <span> DCI (Digital Career Institute)</span>
+                </p>
+              </div>
+            </div>
+            <!-- Fakt 2 -->
+            <div class="box_Fakt">
+              <div class="box_unterschrift">
+                <p><i class="fa-regular fa-circle-check"></i>Skills</p>
+              </div>
+              <div class="Fakt">
+                <p><span>HTML, CSS, SASS, SCSS, Bootstrap</span></p>
+              </div>
+            </div>
+            <!-- Fakt 3 -->
+            <div class="box_Fakt">
+              <div class="box_unterschrift">
+                <p><i class="fa-solid fa-globe"></i>Sprachkenntnisse</p>
+              </div>
+              <div class="Fakt">
+                <ul class="liste">
+                  <li><span> Russisch</span> (Muttersprache)</li>
+                  <li><span> Deutsch </span>(gut)</li>
+                  <li>
+                    <span> Gebärdensprache</span>(die russische sehr gut, die
+                    deutsche gut)
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <!-- Fakt 4 -->
+            <div class="box_Fakt">
+              <div class="box_unterschrift">
+                <p><i class="fa-solid fa-hands"></i>Freizeit</p>
+              </div>
+              <div class="Fakt">
+                <p>
+                  verbringe gern <span> mit Freunde </span>, besonders viel Zeit
+                  <span> mit Gehörlösen</span>
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="foto"></div>
+        </div>
+      </section>
+      <!-- </main>  -->
+      <!-- kontakte -->
+      <section id="container_kontakt">
+        <div>
+          <h2>Kontakte</h2>
+          <div class="linie">
+            <hr />
+            <i class="fa-solid fa-check-double icon"></i>
+            <hr />
+          </div>
+        </div>
+        <div class="container_kontakt1">
+          <div class="box_kontakt11">
+            <i class="fa-regular fa-envelope icon_kontakt"></i>
+            <a class="kontakt"> Vgenia14@gmail.com </a>
+          </div>
+          <div class="box_kontakt11">
+            <i class="fa-brands fa-skype icon_kontakt"></i>
+            <a
+              href="https://join.skype.com/invite/HxD7llHMateM"
+              target="_blank"
+              class="kontakt"
+            >
+              PrygEvgeniia
+            </a>
+          </div>
+          <div class="box_kontakt11">
+            <i class="fa-brands fa-github icon_sociyl"></i>
+            <a
+              class="kontakt"
+              href="https://github.com/Vgenia14"
+              target="_blank"
+              class="kontakt_social"
+            >
+              GitHub
+            </a>
+          </div>
+          <div class="box_kontakt11">
+            <i class="fa-brands fa-linkedin icon_sociyl"></i>
+            <a
+              class="kontakt"
+              href="https://www.linkedin.com/feed/"
+              target="_blank"
+              class="kontakt_social"
+            >
+              LinkedIn
+            </a>
+          </div>
+        </div>
+        <footer><p>Evgeniia Pereprygina &copy 2022</p></footer>
+      </section>
+    </div>
   </body>
 </html>
