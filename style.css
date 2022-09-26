@@ -226,7 +226,7 @@ hr {
   overflow: hidden;
 }
 .bild1_1 {
-  background: url(./images/projekt1.png) top / cover;
+  background: url(.images/projekt1.png) top / cover;
   width: 60%;
   height: 75%;
   margin-top: 1rem;
