@@ -29,7 +29,7 @@ a {
 }
 /* header */
 header {
-  background: url(/images/manarola-vertical-free-photo-2210x3315.jpg) center /
+  background: url(./images/manarola-vertical-free-photo-2210x3315.jpg) center /
     cover;
   width: 100%;
   height: 100%;
